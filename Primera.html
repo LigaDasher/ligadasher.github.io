@@ -1,0 +1,436 @@
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #090A21;
+            margin: 0;
+            padding: 0;
+            font-family: "Lexend", sans-serif;
+        }
+        .cuadro-negro {
+            position: fixed;
+            width: 100%;
+            height: 80px;
+            background-color: #162746;
+            border: 1px solid white;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            top: 0;
+            margin-bottom: 0;
+            z-index: 999;
+        }
+        .cuadro-negro img {
+            max-width: 240px;
+            max-height: 60px;
+            width: auto;
+            height: auto;
+            margin-left: 20px;
+        }
+        .mapa-ccaa {
+            margin-top: 50px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+        .mapa-ccaa img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+        .cuadro-1 {
+            align-content: center;
+            position: relative;
+            margin: 50px auto 0px;
+            height: 200px;
+            width: 1300;
+            border: 1px solid white;
+            display: block;
+            overflow: hidden;
+            align-items: center;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+        }
+        .cuadro-1::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.50);
+        }
+        .cuadro-1 img {
+            max-width: 180px;
+            max-height: 180px;
+            width: auto;
+            height: auto;
+        }
+        .cuadro-1 p {
+            position: relative;
+            z-index: 3;
+            font-family: "Lexend", serif;
+        }
+        .imagen-icono {
+            margin-top: 20px;
+            margin-left: 80px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-size: cover;
+            z-index: 3;
+        }
+        .imagen-ccaa {
+            margin-top: 20px;
+            margin-right: 80px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-size: cover;
+            z-index: 3;
+        }
+        .numero {
+            position: absolute;
+            margin-top: 130px;
+            margin-left: 118px;
+            font-size: 40px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            z-index: 3;
+        }
+        .numero-2 {
+            position: absolute;
+            margin-top: 130px;
+            margin-left: 109px;
+            font-size: 40px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            z-index: 3;
+        }
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 80px;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+            margin-left: auto;
+        }
+        li {
+            margin-left: 10px;
+        }
+        li a, .dropdown-btn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            text-align: left;
+            top: 66px;
+            border: 1px solid white;
+            right: 0;
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 10px 18px;
+            display: flex;
+            text-align: left;
+            text-decoration: none;
+        }
+        .dropdown-content img {
+            margin-right: 10px;
+            max-width: 25px;
+            max-height: 25px;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+            transition-delay: 0.2s;
+        }
+        .jugador {
+            margin-top: 22px;
+            margin-left: 22px;
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+        }
+        .jugador a {
+            target: _blank;
+            color: white;
+        }
+        .provincia {
+            margin-top: 22px;
+            margin-left: 22px;
+            font-size: 18px;
+            color: white;
+        }
+        .fecha {
+            margin-top: 22px;
+            margin-left: 22px;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+        }
+        .intentos {
+            margin-top: 22px;
+            margin-left: 22px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+        }
+        table.tb { width: 300px; border-collapse: collapse; }
+        .tb th, .tb td { border: solid 1px #FFFFFF; padding: 5px; }
+        .tr-blue { background-color:aliceblue;
+        }
+        .cuadro-eliminatorias {text-align:center; border:1px solid #aaa; background-color:#f2f2f2}
+    </style>
+</head>
+<body>
+
+    <div class="cuadro-negro">
+        <a href="index.html"><img src="https://i.imgur.com/rpP06zs.png" alt="Logo" title="Hola"></a>
+        <p style="font-size: 20px; color: white; padding: 5px 10px; margin-bottom: 0; margin-left: 5px;">Temporada 2024</p>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Primera.html">Primera División</a></li>
+                <li><a href="Segunda.html">Segunda División</a></li>
+            </ul>
+    </div>
+    <img src="https://i.imgur.com/XmksdRx.png" style="display: block; margin: 140px auto 10px; max-width: 20%; max-height: 20%" alt="Logo Primera">
+        <p style="font-size: 20px; color: #8096BC; margin: 20px auto 5px; text-align: center">Clasificado para el Play-off</p>
+        <p style="font-size: 20px; color: #CEB87B; margin: 5px auto 5px; text-align: center">Promoción de Descenso</p>
+        <p style="font-size: 20px; color: #E05949; margin: 5px auto 5px; text-align: center">Descenso a Segunda División</p>
+  <table class="tb" style="width: 500; max-width: 600; align-content: center; margin: 10px auto 0px; margin-top: 20px; font-size: 20px">
+        <tr>
+        <th style="color: #eeeeee; background-color: #1E2A60; width: 3%; text-align: center;">Pos.</td>
+        <th style="color: #eeeeee; background-color: #1E2A60; text-align: right; width: auto; text-align: center;">Logo</td>
+        <th style="color: #eeeeee; background-color: #1E2A60; text-align: right; width: 15%; text-align: center;">Jugador</td>
+        <th style="color: #D9EAD3; background-color: #1E2A60; width: 5%; text-align: center;">VG</td>
+        <th style="color: #F4CCCC; background-color: #1E2A60; text-align: right; width: 5%; text-align: center;">VP</td>
+        </tr>
+        <tr>
+        <td alt="Posición" style="color: #eeeeee; background-color: #8096BC; width: 3%; text-align: center;">1º</td>
+        <td alt="Imagen" style="color: #eeeeee; width: 1%; text-align: center;"><img class="imagen-icono" src="https://i.imgur.com/0BZw44u.jpeg" style="position: relative; width: 50px; height: 50px; margin:auto;"></th>
+        <td alt="Nombre" style="color: #eeeeee; text-align: right; width: 15%; text-align: center;">JoseGarzo</td>
+        <td alt="Ganados" style="color: #eeeeee; width: 5%; text-align: center;">0</td>
+        <td alt="Perdidos" style="color: #eeeeee; width: 5%; text-align: center;">0</td>
+        <tr>
+        <td alt="Posición" style="color: #eeeeee; width: 3%; background-color: #8096BC; text-align: center;">2º</td>
+        <td alt="Imagen" style="color: #eeeeee; width: 1%; text-align: center;"><img class="imagen-icono" src="https://i.imgur.com/5fqL98N.png" style="position: relative; width: 50px; height: 50px; margin:auto;"></td>
+        <td alt="Nombre" style="color: #eeeeee; text-align: right; width: 15%; text-align: center;">SuperJavicon</td>
+        <td alt="Ganados" style="color: #eeeeee; width: 5%; text-align: center;">0</td>
+        <td alt="Perdidos" style="color: #eeeeee; width: 5%; text-align: center;">0</td>
+        </tr>
+        <tr>
+        <td alt="Posición" style="color: #eeeeee; width: 3%; background-color: #8096BC;  text-align: center;">3º</td>
+        <td alt="Imagen" style="color: #eeeeee; width: 1%; text-align: center;"><img class="imagen-icono" src="https://i.imgur.com/UAtqiCX.png" style="position: relative; width: 50px; height: 50px; margin:auto;"></th>
+        <td alt="Nombre" style="color: #eeeeee; text-align: right; width: 15%; text-align: center;">RubenChuGD</td>
+        <td alt="Ganados" style="color: #eeeeee; width: 5%; text-align: center;">0</td>
+        <td alt="Perdidos" style="color: #eeeeee; width: 5%; text-align: center;">0</td>
+        <tr>
+        <td alt="Posición" style="color: #eeeeee; width: 3%; background-color: #8096BC;  text-align: center;">4º</td>
+        <td alt="Imagen" style="color: #eeeeee; width: 1%; text-align: center;"><img class="imagen-icono" src="https://i.imgur.com/qIIpmub.png" style="position: relative; width: 50px; height: 50px; margin:auto;"></td>
+        <td alt="Nombre" style="color: #eeeeee; text-align: right; width: 15%; text-align: center;">Nesta</td>
+        <td alt="Ganados" style="color: #eeeeee; width: 5%; text-align: center;">0</td>
+        <td alt="Perdidos" style="color: #eeeeee; width: 5%; text-align: center;">0</td>
+        </tr>
+        <tr>
+        <td alt="Posición" style="color: #eeeeee; width: 3%; background-color: #8096BC;  text-align: center;">5º</td>
+        <td alt="Imagen" style="color: #eeeeee; width: 1%; text-align: center;"><img class="imagen-icono" src="https://yt3.googleusercontent.com/ytc/AIdro_l_8Pdk_RmP8PU5GtXUsXzseoLFgOzcP-5qIhtkaBvX5GI=s900-c-k-c0x00ffffff-no-rj" style="position: relative; width: 50px; height: 50px; margin:auto;"></th>
+        <td alt="Nombre" style="color: #eeeeee; text-align: right; width: 15%; text-align: center;">Wity26</td>
+        <td alt="Ganados" style="color: #eeeeee; width: 5%; text-align: center;">0</td>
+        <td alt="Perdidos" style="color: #eeeeee; width: 5%; text-align: center;">0</td>
+        <tr>
+        <td alt="Posición" style="color: #eeeeee; width: 3%; background-color: #8096BC;  text-align: center;">6º</td>
+        <td alt="Imagen" style="color: #eeeeee; width: 1%; text-align: center;"><img class="imagen-icono" src="https://yt3.googleusercontent.com/KL-W7NXoDfBTrT6jVbec8eL1RgIZkNpnACawv1Memb8kn4EgShh4-XRkU-7JFKFxmGYjp8hXoBE=s900-c-k-c0x00ffffff-no-rj" style="position: relative; width: 50px; height: 50px; margin:auto;"></td>
+        <td alt="Nombre" style="color: #eeeeee; text-align: right; width: 15%; text-align: center;">Yitzu</td>
+        <td alt="Ganados" style="color: #eeeeee; width: 5%; text-align: center;">0</td>
+        <td alt="Perdidos" style="color: #eeeeee; width: 5%; text-align: center;">0</td>
+        </tr>
+        <tr>
+        <td alt="Posición" style="color: #eeeeee; width: 3%; background-color: #8096BC;  text-align: center;">7º</td>
+        <td alt="Imagen" style="color: #eeeeee; width: 1%; text-align: center;"><img class="imagen-icono" src="https://yt3.googleusercontent.com/utU1lt2gyZ0pPPsDsDEtIRlS9rMG_Wg6DckVHTSYmZDwqxeUEoEC0U7zJ9Dk7VUSav31nd9Xzg=s900-c-k-c0x00ffffff-no-rj" style="position: relative; width: 50px; height: 50px; margin:auto;"></th>
+        <td alt="Nombre" style="color: #eeeeee; text-align: right; width: 15%; text-align: center;">Jtarin</td>
+        <td alt="Ganados" style="color: #eeeeee; width: 5%; text-align: center;">0</td>
+        <td alt="Perdidos" style="color: #eeeeee; width: 5%; text-align: center;">0</td>
+        <tr>
+        <td alt="Posición" style="color: #eeeeee; width: 3%; background-color: #8096BC;  text-align: center;">8º</td>
+        <td alt="Imagen" style="color: #eeeeee; width: 1%; text-align: center;"><img class="imagen-icono" src="https://yt3.googleusercontent.com/C5SZQT1l1OFy79pdWWCWZqxmKHnyaLLtkVO6xSbmQo5kmGO5Z_s02BIiQCrKXcis_RUVm3Q0=s900-c-k-c0x00ffffff-no-rj" style="position: relative; width: 50px; height: 50px; margin:auto;"></td>
+        <td alt="Nombre" style="color: #eeeeee; text-align: right; width: 15%; text-align: center;">Laika</td>
+        <td alt="Ganados" style="color: #eeeeee; width: 5%; text-align: center;">0</td>
+        <td alt="Perdidos" style="color: #eeeeee; width: 5%; text-align: center;">0</td>
+        </tr>
+        <tr>
+        <td alt="Posición" style="color: #eeeeee; width: 3%; text-align: center;">9º</td>
+        <td alt="Imagen" style="color: #eeeeee; width: 1%; text-align: center;"><img class="imagen-icono" src="https://yt3.googleusercontent.com/qvncpOIPLVgYBAerObhFeGHzGNKJ4ekLR5ulkSCsuR_M6p19I9R4tgBh5Ob6w3J1Sr8mf9hE=s900-c-k-c0x00ffffff-no-rj" style="position: relative; width: 50px; height: 50px; margin:auto;"></th>
+        <td alt="Nombre" style="color: #eeeeee; text-align: right; width: 15%; text-align: center;">Leyro</td>
+        <td alt="Ganados" style="color: #eeeeee; width: 5%; text-align: center;">0</td>
+        <td alt="Perdidos" style="color: #eeeeee; width: 5%; text-align: center;">0</td>
+        <tr>
+        <td alt="Posición" style="color: #eeeeee; width: 3%; text-align: center;">10º</td>
+        <td alt="Imagen" style="color: #eeeeee; width: 1%; text-align: center;"><img class="imagen-icono" src="https://yt3.googleusercontent.com/K9oH9_-w8imbqHGbicEKJ8Yy5xKM-BrBV7Zo0_4h71JVZ1CCN3Y6ENH_aQstxgNiN2qyLV5Lnj4=s900-c-k-c0x00ffffff-no-rj" style="position: relative; width: 50px; height: 50px; margin:auto;"></td>
+        <td alt="Nombre" style="color: #eeeeee; text-align: right; width: 15%; text-align: center;">Guille N.S</td>
+        <td alt="Ganados" style="color: #eeeeee; width: 5%; text-align: center;">0</td>
+        <td alt="Perdidos" style="color: #eeeeee; width: 5%; text-align: center;">0</td>
+        </tr>
+        <tr>
+        <td alt="Posición" style="color: #eeeeee; width: 3%; text-align: center;">11º</td>
+        <td alt="Imagen" style="color: #eeeeee; width: 1%; text-align: center;"><img class="imagen-icono" src="https://yt3.googleusercontent.com/1sIZWKB6t3LDBpWnlfkz_opgi_Mm3s4w1LyQ5LduoNnbkzBkJjAW7eM4EVzywKcNr12w5k0fOw=s900-c-k-c0x00ffffff-no-rj" style="position: relative; width: 50px; height: 50px; margin:auto;"></th>
+        <td alt="Nombre" style="color: #eeeeee; text-align: right; width: 15%; text-align: center;">DrexX</td>
+        <td alt="Ganados" style="color: #eeeeee; width: 5%; text-align: center;">0</td>
+        <td alt="Perdidos" style="color: #eeeeee; width: 5%; text-align: center;">0</td>
+        <tr>
+        <td alt="Posición" style="color: #eeeeee; width: 3%; text-align: center;">12º</td>
+        <td alt="Imagen" style="color: #eeeeee; width: 1%; text-align: center;"><img class="imagen-icono" src="https://yt3.googleusercontent.com/EJp8mwlSc4psoXm5EB9DEqzNaPUnsx4IWnRhf0C39x9Wb9Zgel8cVJw8WdrTrvRcxjS9eWYC=s900-c-k-c0x00ffffff-no-rj" style="position: relative; width: 50px; height: 50px; margin:auto;"></td>
+        <td alt="Nombre" style="color: #eeeeee; text-align: right; width: 15%; text-align: center;">Holombro</td>
+        <td alt="Ganados" style="color: #eeeeee; width: 5%; text-align: center;">0</td>
+        <td alt="Perdidos" style="color: #eeeeee; width: 5%; text-align: center;">0</td>
+        </tr>
+        <tr>
+        <td alt="Posición" style="color: #eeeeee; width: 3%; text-align: center;">13º</td>
+        <td alt="Imagen" style="color: #eeeeee; width: 1%; text-align: center;"><img class="imagen-icono" src="https://i.imgur.com/FlGKGOV.png" style="position: relative; width: 50px; height: 50px; margin:auto;"></th>
+        <td alt="Nombre" style="color: #eeeeee; text-align: right; width: 15%; text-align: center;">ALIK_032</td>
+        <td alt="Ganados" style="color: #eeeeee; width: 5%; text-align: center;">0</td>
+        <td alt="Perdidos" style="color: #eeeeee; width: 5%; text-align: center;">0</td>
+        <tr>
+        <td alt="Posición" style="color: #eeeeee; width: 3%; text-align: center;">14º</td>
+        <td alt="Imagen" style="color: #eeeeee; width: 1%; text-align: center;"><img class="imagen-icono" src="https://i.imgur.com/XacCbXd.png" style="position: relative; width: 50px; height: 50px; margin:auto;"></td>
+        <td alt="Nombre" style="color: #eeeeee; text-align: right; width: 15%; text-align: center;">EastShark1</td>
+        <td alt="Ganados" style="color: #eeeeee; width: 5%; text-align: center;">0</td>
+        <td alt="Perdidos" style="color: #eeeeee; width: 5%; text-align: center;">0</td>
+        </tr>
+        <tr>
+        <td alt="Posición" style="color: #eeeeee; background-color: #CEB87B; width: 3%; text-align: center;">15º</td>
+        <td alt="Imagen" style="color: #eeeeee; width: 1%; text-align: center;"><img class="imagen-icono" src="" style="position: relative; width: 50px; height: 50px; margin:auto;"></th>
+        <td alt="Nombre" style="color: #eeeeee; text-align: right; width: 15%; text-align: center;">-</td>
+        <td alt="Ganados" style="color: #eeeeee; width: 5%; text-align: center;">0</td>
+        <td alt="Perdidos" style="color: #eeeeee; width: 5%; text-align: center;">0</td>
+        <tr>
+        <td alt="Posición" style="color: #eeeeee; background-color: #CEB87B; width: 3%; text-align: center;">16º</td>
+        <td alt="Imagen" style="color: #eeeeee; width: 1%; text-align: center;"><img class="imagen-icono" src="" style="position: relative; width: 50px; height: 50px; margin:auto;"></td>
+        <td alt="Nombre" style="color: #eeeeee; text-align: right; width: 15%; text-align: center;">-</td>
+        <td alt="Ganados" style="color: #eeeeee; width: 5%; text-align: center;">0</td>
+        <td alt="Perdidos" style="color: #eeeeee; width: 5%; text-align: center;">0</td>
+        </tr>
+        <tr>
+        <td alt="Posición" style="color: #eeeeee; background-color: #E05949; width: 3%; text-align: center;">17º</td>
+        <td alt="Imagen" style="color: #eeeeee; width: 1%; text-align: center;"><img class="imagen-icono" src="" style="position: relative; width: 50px; height: 50px; margin:auto;"></th>
+        <td alt="Nombre" style="color: #eeeeee; text-align: right; width: 15%; text-align: center;">-</td>
+        <td alt="Ganados" style="color: #eeeeee; width: 5%; text-align: center;">0</td>
+        <td alt="Perdidos" style="color: #eeeeee; width: 5%; text-align: center;">0</td>
+        <tr>
+        <td alt="Posición" style="color: #eeeeee; background-color: #E05949; width: 3%; text-align: center;">18º</td>
+        <td alt="Imagen" style="color: #eeeeee; width: 1%; text-align: center;"><img class="imagen-icono" src="" style="position: relative; width: 50px; height: 50px; margin:auto;"></td>
+        <td alt="Nombre" style="color: #eeeeee; text-align: right; width: 15%; text-align: center;">-</td>
+        <td alt="Ganados" style="color: #eeeeee; width: 5%; text-align: center;">0</td>
+        <td alt="Perdidos" style="color: #eeeeee; width: 5%; text-align: center;">0</td>
+        </tr>
+
+    </table>
+    <table style="align-content: center; margin: 0px auto 0px; margin-top: 90px; font-size: 90%; border-collapse:separate; border-spacing:0;">
+        <tbody><tr><td></td><td colspan="3" class="cuadro-eliminatorias">CUARTOS DE FINAL
+        </td><td></td><td></td><td colspan="3" class="cuadro-eliminatorias">SEMIFINALES
+        </td><td></td><td></td><td colspan="3" class="cuadro-eliminatorias">FINAL
+        
+        </td><td></td></tr><tr><td style="width:1px">
+        </td><td style="width:25px">&nbsp;</td><td style="width:150px">&nbsp;</td><td style="width:25px">&nbsp;</td><td style="width:5px"></td><td style="width:5px"></td><td style="width:25px">&nbsp;</td><td style="width:150px">&nbsp;</td><td style="width:25px">&nbsp;</td><td style="width:5px"></td><td style="width:5px"></td><td style="width:25px">&nbsp;</td><td style="width:150px">&nbsp;</td><td style="width:25px">&nbsp;</td><td style="width:1px"></td></tr>
+        <tr><td style="height:7px"></td><td rowspan="2" style="color: #eeeeee; text-align:center;background-color:#0F1531;border:1px solid #aaa;border-top-width:1px">1 <!-- Primero -->
+        
+        </td><td rowspan="2" style="color: #eeeeee; background-color:#0F1531;padding:0 2px;border:1px solid #aaa;border-top-width:1px">&nbsp;Por definir
+        </td><td rowspan="2" style="color: #eeeeee; text-align:center;background-color:#0F1531;border-color:#aaa;border-style:solid;border-top-width:1px;border-left-width:1px;border-right-width:1px;border-bottom-width:1px">-
+        
+        </td><td rowspan="2" style="color: #eeeeee; border-style:solid;border-width:0;border-color:white;border-bottom-width:2px"></td><td rowspan="3" colspan="5" style="border-style:solid;border-width:0;border-color:white"></td><td rowspan="9" colspan="5" style="border-style:solid;border-width:0;border-color:white">
+        </td></tr><tr><td style="height:7px">
+
+        </td></tr><tr><td style="height:7px"></td><td rowspan="2" style="color: #eeeeee; text-align:center;background-color:#0F1531;border:1px solid #aaa;border-top-width:1px">8 <!-- Segundo -->
+
+        </td><td rowspan="2" style="color: #eeeeee; background-color:#0F1531;padding:0 2px;border:1px solid #aaa;border-top-width:1px">&nbsp;Por definir
+        </td><td rowspan="2" style="color: #eeeeee; text-align:center;background-color:#0F1531;border-color:#aaa;border-style:solid;border-top-width:1px;border-left-width:1px;border-right-width:1px;border-bottom-width:1px">-
+        
+ 
+
+        </td><td rowspan="2" style="border-style:solid;border-width:0;border-color:white;border-top-width:2px;border-right-width:2px"></td></tr><tr><td style="height:7px"></td><td rowspan="2" style="border-style:solid;border-width:0;border-color:white;border-bottom-width:2px"></td><td rowspan="2" colspan="2" style="color: #eeeeee; background-color:#0F1531;padding:0 2px;border:1px solid #aaa;border-top-width:1px">&nbsp;Por definir <!-- Pase 1 -->
+        </td><td rowspan="2" style="color: #eeeeee; text-align:center;background-color:#0F1531;border-color:#aaa;border-style:solid;border-top-width:1px;border-left-width:1px;border-right-width:1px;border-bottom-width:1px">-
+
+        </td><td rowspan="2" style="color: #eeeeee; border-style:solid;border-width:0;border-color:white;border-bottom-width:2px"></td></tr><tr><td style="height:7px"></td><td rowspan="2" colspan="3" style="text-align:center">
+        </td><td style="border-color:white;border-width:0 2px 0 0;border-style:solid">
+
+        </td></tr><tr><td style="height:7px"></td><td style="border-color:white;border-width:0 2px 0 0;border-style:solid"></td><td rowspan="2" style="border-style:solid;border-width:0;border-color:white;border-top-width:2px">
+        </td><td rowspan="2" colspan="2" style="color: #eeeeee; background-color:#0F1531;padding:0 2px;border:1px solid #aaa;border-top-width:1px">&nbsp;Por definir <!-- Pase 2 -->
+        </td><td rowspan="2" style="color: #eeeeee; text-align:center;background-color:#0F1531;border-color:#aaa;border-style:solid;border-top-width:1px;border-left-width:1px;border-right-width:1px;border-bottom-width:1px">-
+
+
+
+        </td><td rowspan="2" style="color: #eeeeee; border-style:solid;border-width:0;border-color:white;border-top-width:2px;border-right-width:2px">
+        
+        </td></tr><tr><td style="color: #eeeeee; height:7px"></td><td rowspan="2" style="color: #eeeeee; text-align:center;background-color:#0F1531;border:1px solid #aaa;border-top-width:1px">4 <!-- Tercero -->
+        </td><td rowspan="2" style="color: #eeeeee; background-color:#0F1531;padding:0 2px;border:1px solid #aaa;border-top-width:1px">&nbsp;Por definir
+        </td><td rowspan="2" style="color: #eeeeee; text-align:center;background-color:#0F1531;border-color:#aaa;border-style:solid;border-top-width:1px;border-left-width:1px;border-right-width:1px;border-bottom-width:1px">-
+        
+        </td><td rowspan="2" style="color: #eeeeee; border-style:solid;border-width:0;border-color:white;border-bottom-width:2px;border-right-width:2px">
+        
+        </td></tr><tr><td style="height:7px"></td><td rowspan="3" colspan="5" style="border-style:solid;border-width:0;border-color:white;border-right-width:2px"></td></tr><tr><td style="height:7px"></td><td rowspan="2" style="color: #eeeeee; text-align:center;background-color:#0F1531;border:1px solid #aaa;border-top-width:1px">5 <!-- Cuarto -->
+        </td><td rowspan="2" style="color: #eeeeee; background-color:#0F1531;padding:0 2px;border:1px solid #aaa;border-top-width:1px">&nbsp;Por definir <!-- Cuarto -->
+        </td><td rowspan="2" style="color: #eeeeee; text-align:center;background-color:#0F1531;border-color:#aaa;border-style:solid;border-top-width:1px;border-left-width:1px;border-right-width:1px;border-bottom-width:1px">-
+
+        </td><td rowspan="2" style="color: #eeeeee; border-style:solid;border-width:0;border-color:white;border-top-width:2px"></td></tr><tr><td style="height:7px"></td><td rowspan="2" style="border-style:solid;border-width:0;border-color:white;border-bottom-width:2px"></td><td rowspan="2" colspan="2" style="color: #eeeeee;background-color:#0F1531;padding:0 2px;border:1px solid #aaa;border-top-width:1px">&nbsp;Por definir <!-- FINALISTA 1 -->
+        </td><td rowspan="2" style="color: #eeeeee; text-align:center;background-color:#0F1531;border-color:#aaa;border-style:solid;border-top-width:1px;border-left-width:1px;border-right-width:1px;border-bottom-width:1px">-
+
+
+        </td><td rowspan="2" style="color: #eeeeee; border-style:solid;border-width:0;border-color:white"></td></tr><tr><td style="height:7px"></td><td rowspan="2" colspan="8" style="text-align:center">
+        </td><td style="border-color:white;border-width:0 2px 0 0;border-style:solid"></td></tr><tr><td style="height:7px"></td><td style="border-color:white;border-width:0 2px 0 0;border-style:solid"></td><td rowspan="2" style="border-style:solid;border-width:0;border-color:white;border-top-width:2px"></td><td rowspan="2" colspan="2" style="color: #eeeeee;background-color:#0F1531;padding:0 2px;border:1px solid #aaa;border-top-width:1px">&nbsp;Por definir <!-- FINALISTA 2 -->
+        </td><td rowspan="2" style="color: #eeeeee; text-align:center;background-color:#0F1531;border-color:#aaa;border-style:solid;border-top-width:1px;border-left-width:1px;border-right-width:1px;border-bottom-width:1px">-
+
+
+
+
+        </td><td rowspan="2" style="color: #eeeeee; border-style:solid;border-width:0;border-color:white"></td></tr><tr><td style="height:7px"></td><td rowspan="2" style="color: #eeeeee;text-align:center;background-color:#0F1531;border:1px solid #aaa;border-top-width:1px">2 <!-- Quinto -->
+        </td><td rowspan="2" style="color: #eeeeee; background-color:#0F1531;padding:0 2px;border:1px solid #aaa;border-top-width:1px">&nbsp;Por definir
+        </td><td rowspan="2" style="color: #eeeeee; text-align:center;background-color:#0F1531;border-color:#aaa;border-style:solid;border-top-width:1px;border-left-width:1px;border-right-width:1px;border-bottom-width:1px">-
+
+
+        </td><td rowspan="2" style="color: #eeeeee; border-style:solid;border-width:0;border-color:white;border-bottom-width:2px"></td><td rowspan="3" colspan="5" style="border-style:solid;border-width:0;border-color:white;border-right-width:2px"></td></tr><tr><td style="height:7px"></td><td rowspan="8" colspan="5" style="border-style:solid;border-width:0;border-color:white">
+        </td></tr><tr><td style="height:7px"></td><td rowspan="2" style="color: #eeeeee; text-align:center;background-color:#0F1531;border:1px solid #aaa;border-top-width:1px">7 <!-- Sexto -->
+        </td><td rowspan="2" style="color: #eeeeee; background-color:#0F1531;padding:0 2px;border:1px solid #aaa;border-top-width:1px">&nbsp;Por definir
+        </td><td rowspan="2" style="color: #eeeeee; text-align:center;background-color:#0F1531;border-color:#aaa;border-style:solid;border-top-width:1px;border-left-width:1px;border-right-width:1px;border-bottom-width:1px">-
+
+
+        </td><td rowspan="2" style="color: #eeeeee; border-style:solid;border-width:0;border-color:white;border-top-width:2px;border-right-width:2px">
+        </td></tr><tr><td style="height:7px"></td><td rowspan="2" style="border-style:solid;border-width:0;border-color:white;border-bottom-width:2px"></td><td rowspan="2" colspan="2" style="color: #eeeeee; background-color:#0F1531;padding:0 2px;border:1px solid #aaa;border-top-width:1px">&nbsp;Por definir <!-- Pase 3 -->
+        </td><td rowspan="2" style="color: #eeeeee; text-align:center;background-color:#0F1531;border-color:#aaa;border-style:solid;border-top-width:1px;border-left-width:1px;border-right-width:1px;border-bottom-width:1px">-
+
+        </td><td rowspan="2" style="color: #eeeeee; border-style:solid;border-width:0;border-color:white;border-bottom-width:2px;border-right-width:2px"></td></tr><tr><td style="height:7px"></td><td rowspan="2" colspan="3" style="text-align:center">
+
+        </td><td style="border-color:white;border-width:0 2px 0 0;border-style:solid"></td></tr><tr><td style="height:7px"></td><td style="border-color:white;border-width:0 2px 0 0;border-style:solid"></td><td rowspan="2" style="border-style:solid;border-width:0;border-color:white;border-top-width:2px"></td><td rowspan="2" colspan="2" style="color: #eeeeee;background-color:#0F1531;padding:0 2px;border:1px solid #aaa;border-top-width:1px">&nbsp;Por definir <!-- Pase 4 -->
+        </td><td rowspan="2" style="color: #eeeeee; text-align:center;background-color:#0F1531;border-color:#aaa;border-style:solid;border-top-width:1px;border-left-width:1px;border-right-width:1px;border-bottom-width:1px">-
+
+
+
+        </td><td rowspan="2" style="color: #eeeeee; border-style:solid;border-width:0;border-color:white;border-top-width:2px"></td></tr><tr><td style="height:7px"></td><td rowspan="2" style="color: #eeeeee; text-align:center;background-color:#0F1531;border:1px solid #aaa;border-top-width:1px">3
+        </td><td rowspan="2" style="color: #eeeeee; background-color:#0F1531;padding:0 2px;border:1px solid #aaa;border-top-width:1px">&nbsp;Por definir <!-- Séptimo -->
+        </td><td rowspan="2" style="color: #eeeeee; text-align:center;background-color:#0F1531;border-color:#aaa;border-style:solid;border-top-width:1px;border-left-width:1px;border-right-width:1px;border-bottom-width:1px">-
+
+
+        </td><td rowspan="2" style="color: #eeeeee; border-style:solid;border-width:0;border-color:white;border-bottom-width:2px;border-right-width:2px"></td></tr><tr><td style="height:7px"></td><td rowspan="2" colspan="5" style="border-style:solid;border-width:0;border-color:white"></td></tr><tr><td style="height:7px"></td><td rowspan="2" style="color: #eeeeee;  text-align:center;background-color:#0F1531;border:1px solid #aaa;border-top-width:1px">6
+        </td><td rowspan="2" style="color: #eeeeee; background-color:#0F1531;padding:0 2px;border:1px solid #aaa;border-top-width:1px">&nbsp;Por definir
+        </td><td rowspan="2" style="color: #eeeeee; text-align:center;background-color:#0F1531;border-color:#aaa;border-style:solid;border-top-width:1px;border-left-width:1px;border-right-width:1px;border-bottom-width:1px">-
+        </td><td style="border-style:solid;border-width:0;border-color:white;border-top-width:2px"></td></tr></tbody></table>
+</body>
+</html>
