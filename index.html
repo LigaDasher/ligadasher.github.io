@@ -8,6 +8,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
     <style>
         body {
+            background-image: url('https://i.imgur.com/8aSw4NT.png');
+            background-size: cover;
             background-color: #090A21;
             margin: 0;
             padding: 0;
@@ -75,44 +77,6 @@
             z-index: 3;
             font-family: "Lexend", serif;
         }
-        .imagen-icono {
-            margin-top: 20px;
-            margin-left: 80px;
-            position: absolute;
-            top: 0;
-            left: 0;
-            background-size: cover;
-            z-index: 3;
-        }
-        .imagen-ccaa {
-            margin-top: 20px;
-            margin-right: 80px;
-            position: absolute;
-            top: 0;
-            right: 0;
-            background-size: cover;
-            z-index: 3;
-        }
-        .numero {
-            position: absolute;
-            margin-top: 130px;
-            margin-left: 118px;
-            font-size: 40px;
-            color: white;
-            font-weight: bold;
-            text-align: center;
-            z-index: 3;
-        }
-        .numero-2 {
-            position: absolute;
-            margin-top: 130px;
-            margin-left: 109px;
-            font-size: 40px;
-            color: white;
-            font-weight: bold;
-            text-align: center;
-            z-index: 3;
-        }
         ul {
             display: flex;
             justify-content: flex-end;
@@ -164,42 +128,6 @@
             display: block;
             transition-delay: 0.2s;
         }
-        .jugador {
-            margin-top: 22px;
-            margin-left: 22px;
-            font-size: 25px;
-            font-weight: bold;
-            color: white;
-        }
-        .jugador a {
-            target: _blank;
-            color: white;
-        }
-        .provincia {
-            margin-top: 22px;
-            margin-left: 22px;
-            font-size: 18px;
-            color: white;
-        }
-        .fecha {
-            margin-top: 22px;
-            margin-left: 22px;
-            font-size: 20px;
-            font-weight: bold;
-            color: white;
-        }
-        .intentos {
-            margin-top: 22px;
-            margin-left: 22px;
-            font-size: 18px;
-            font-weight: bold;
-            color: white;
-        }
-        table.tb { width: 300px; border-collapse: collapse; }
-        .tb th, .tb td { border: solid 1px #FFFFFF; padding: 5px; }
-        .tr-blue { background-color:aliceblue;
-        }
-        .cuadro-eliminatorias {text-align:center; border:1px solid #aaa; background-color:#f2f2f2}
         .texto-normal {
             text-align: left;
             font-size: 20px;
@@ -209,31 +137,95 @@
             margin-right: 250px;
 
         }
+        table.tb { width: 300px; border-collapse: collapse; }
+        .tb th, .tb td { border: solid 1px #FFFFFF; padding: 5px; }
+        .tr-blue { background-color:aliceblue;
+        }
+        .cuadro-eliminatorias {text-align:center; border:1px solid #aaa; background-color:#f2f2f2
+        }
+                .bandera {
+            width: 40px;
+            height: auto;
+            vertical-align: text-top;
+        }
+        .posicion {
+            color: #eeeeee;
+            width: 3%;
+            text-align: center;
+        }
+        .jug {
+            color: #eeeeee;
+            width: 50%;
+            text-align: left;
+        }
+        .pts {
+            color: #eeeeee;
+            width: 5%;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
 
     <div class="cuadro-negro">
         <a href="index.html"><img src="https://i.imgur.com/rpP06zs.png" alt="Logo" title="Hola"></a>
-        <p style="font-size: 20px; color: white; padding: 5px 10px; margin-bottom: 0; margin-left: 5px;">Temporada 2024</p>
+        <p style="font-size: 20px; color: white; padding: 5px 10px; margin-bottom: 0; margin-left: 5px;">Temporada 2025</p>
             <ul>
                 <li><a href="https://sites.google.com/view/laligadasher/inicio">Inicio</a></li>
                 <li><a href="https://sites.google.com/view/laligadasher/primera-divisi%C3%B3n">Primera División</a></li>
                 <li><a href="https://sites.google.com/view/laligadasher/segunda-divisi%C3%B3n">Segunda División</a></li>
             </ul>
     </div>
-        <p class="texto-normal" style="margin-top: 100px;">LaLiga Dasher y LaLiga B son campeonatos nacionales de España del videojuego Geometry Dash que lo organiza ElTigreVerde412.</p>
+        <p class="texto-normal" style="margin-top: 120px;">LaLiga Dasher y LaLiga B son campeonatos nacionales de España del videojuego Geometry Dash que lo organiza ElTigreVerde412.</p>
         <p class="texto-normal">LaLiga Dasher es el campeonato de Primera División mientras que LaLiga B es el campeonato de Segunda División.</p>
-        <p class="texto-normal">El formato es un sistema de Liga o de todos contra todos, es decir, cada jugador del torneo se enfrentará contra todos los demás en versus de una jugador contra otro jugador, así hasta que hayan jugado todos los jugadores y los 8 mejores posicionados en tabla, jugarán un Play-Off de cuartos hasta la final que se decidirá el campeón.</p>
-        <p class="texto-normal">El sistema de cada versus, será a un solo nivel que serán elegidos aleatoriamente entre las dificultades Hard Demon, Insane Demon y Extreme Demon y constarán de 30 minutos para hacer el mejor porcentaje en el nivel, el que tenga mejor porcentaje será el ganador o si lo completa antes de que termine el tiempo.</p>
-
-    <div class="cuadro-1">
-    <img src="https://i.imgur.com/RiSMTqD.gif" alt="Tigre-Imagen" style=" max-width: 200px; max-height: 200px">
-    <div class="informacion">
-        <p style="margin-top: 22px; margin-left: 22px; font-size: 35px; font-weight: bold; color: white"><i>ElTigreVerde412</i></p>
-        <p style="margin-left: 22px; font-size: 20px; font-weight: bold; color: white">Creador<br>
-        <p style="margin-left: 22px; font-size: 20px; color: white">8 de Octubre de 2005 (18 años) Guadalajara</p></div>
+        <p class="texto-normal">El formato es un sistema de Liga o de todos contra todos, es decir, cada jugador del torneo se enfrentará contra todos los demás en versus de una jugador contra otro jugador, así hasta que hayan jugado todos los jugadores, luego de aquello se realizará una fase de Knockout que clasificarán los 8 primeros de Primera División y campeón de la Final será el ganador del torneo.</p>
+        <p class="texto-normal">Para ascender a la Primera División, el primero y el segundo de la Segunda División subirá directamente a la Primera División, mientras que el tercero y el cuarto jugarán un Play-Off contra el antepenúltimo y tras antepenúltimo de la Primera División.</p>
+        <p class="texto-normal">El sistema de cada versus, será de un nivel que se elegirá aleatoriamente, ya sea Hard Demon, Insane Demon o Extreme Demon, donde esos dos jugadores tendrán 30 minutos para hacer su mejor progress.</p>
+        <p class="texto-normal">Cuando sea una partida, tendrán que estar en el server de Discord para compartir pantalla de Geometry Dash para que sea transmitido en el canal de Twitch oficial de LaLiga Dasher (cada uno si quiere podrá transmitir en Twitch o YouTube su perspectiva), estarán todos ensordecidos de servidor y los organizadores os dirán cuándo empezará el tiempo y cuando se termine os quitará el ensordecimiento (habrá un último intento si es que no te has muerto cuando termine el tiempo).</p>
+        <p class="texto-normal"><a href="https://www.youtube.com/@LigaDasher"><img class="bandera" src="https://i.imgur.com/4ClkCZ3.png" title="YouTube"></a>
+            <a href="https://www.twitch.tv/ligadasher"><img class="bandera" src="https://i.imgur.com/yaLlK2F.png" title="Twitch"></a>
+            <a href="https://x.com/LaLigaDasher"><img class="bandera" src="https://i.imgur.com/D4WIKqZ.png" title="Twitter"></a>
+            <a href="https://docs.google.com/document/d/1Oe5IfNs88xFC4CweEWTC9XHiD_goTBKSinPVMNM94Rc"><img class="bandera" src="https://i.imgur.com/zC9Mzph.png" title="Reglamento"></a></p>
+  
+    <a href="https://x.com/ElTigreVerde412"><img class="cuadro-1" src="https://i.imgur.com/RiSMTqD.gif" alt="Tigre-Imagen" style=" max-width: 200px; max-height: 200px"></a>
     </div>
+        <p class="texto-normal" style="margin-top: 100px; text-align: center;">PALMARÉS DE PRIMERA DIVISIÓN</p>
+  <table class="tb" style="width: 500; max-width: 600; align-content: center; margin: 10px auto 0px; margin-top: 20px; font-size: 20px">
+        <tr>
+        <th style="color: #eeeeee; background-color: #1E2A60; width: 3%; text-align: center;">Pos.</td>
+        <th style="color: #eeeeee; background-color: #1E2A60; text-align: right; width: 15%; text-align: center;">Jugador</td>
+        <th style="color: #eeeeee; background-color: #1E2A60; width: 5%; text-align: center;">Títulos</td>
+        <th style="color: #eeeeee; background-color: #1E2A60; width: 30%; text-align: center;">Años</td>
+        </tr>
+        <tr>
+        <td class="posicion">1º</td>
+        <td class="jug"><img class="bandera" src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Flag_of_the_Community_of_Madrid.svg"> wFishe</td>
+        <td class="pts" alt="Ganados">1</td>
+        <td class="pts" alt="Perdidos">2025</td>
+        </tr>
+        <td class="posicion">1º</td>
+        <td class="jug"><img class="bandera" src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Flag_of_Cantabria_%28Official%29.svg"> 400</td>
+        <td class="pts" alt="Ganados">1</td>
+        <td class="pts" alt="Perdidos">2024</td>
+    </table>
 
+        <p class="texto-normal" style="margin-top: 80px; text-align: center; color">PALMARÉS DE SEGUNDA DIVISIÓN</p>
+  <table class="tb" style="width: 500; max-width: 600; align-content: center; margin: 10px auto 0px; margin-top: 20px; font-size: 20px; margin-bottom: 40px;">
+        <tr>
+        <th style="color: #eeeeee; background-color: #1E2A60; width: 3%; text-align: center;">Pos.</td>
+        <th style="color: #eeeeee; background-color: #1E2A60; text-align: right; width: 15%; text-align: center;">Jugador</td>
+        <th style="color: #eeeeee; background-color: #1E2A60; width: 5%; text-align: center;">Títulos</td>
+        <th style="color: #eeeeee; background-color: #1E2A60; width: 30%; text-align: center;">Años</td>
+        </tr>
+        <tr>
+        <td class="posicion">1º</td>
+        <td class="jug"><img class="bandera" src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Flag_of_Asturias.svg"> Raizen</td>
+        <td class="pts" alt="Ganados">1</td>
+        <td class="pts" alt="Perdidos">2025</td>
+        </tr>
+        <td class="posicion">1º</td>
+        <td class="jug"><img class="bandera" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Catalonia.svg"> Draks</td>
+        <td class="pts" alt="Ganados">1</td>
+        <td class="pts" alt="Perdidos">2024</td>
 </body>
 </html>
